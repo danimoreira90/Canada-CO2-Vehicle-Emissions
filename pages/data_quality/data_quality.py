@@ -24,23 +24,26 @@ def data_quality():
     st.title('2. Qualidade de dados:')
 
     # Boxplot por Consumo de Combustível Combinado (mpg)
-    fig, ax = plt.subplots()
+    
     st.subheader('Boxplot por Consumo de Combustível Combinado (mpg)')
+    fig1, ax = plt.subplots()
     plt.figure(figsize=(12, 8))
     sns.boxplot(x='Fuel Consumption Comb (mpg)', y='CO2 Emissions(g/km)', data=df, palette='viridis', hue='Fuel Consumption Comb (mpg)',legend=False )
     plt.title('Boxplot de Emissões de CO2 por Consumo de Combustível Combinado (mpg)')
     plt.xlabel('Fuel Consumption Comb (mpg)')
     plt.ylabel('CO2 Emissions (g/km)')
-    st.pyplot(fig)
+    st.pyplot(fig1)
 
     # Gráfico de Dispersão entre Consumo de Combustível na Cidade e Emissões de CO2
+    
     st.subheader('Gráfico de Dispersão entre Consumo de Combustível na Cidade e Emissões de CO2')
+    fig2, ax = plt.subplots()
     plt.figure(figsize=(10, 6))
     sns.scatterplot(x='Fuel Consumption City (L/100 km)', y='CO2 Emissions(g/km)', data=df, color='green')
     plt.title('Gráfico de Dispersão entre Consumo de Combustível na Cidade e Emissões de CO2')
     plt.xlabel('Fuel Consumption City (L/100 km)')
     plt.ylabel('CO2 Emissions (g/km)')
-    st.pyplot(fig)
+    st.pyplot(fig2)
 
     st.write('Problema 1: Outliers')
     st.write('Problema: Presença de valores extremos em uma ou mais variáveis.')
