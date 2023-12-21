@@ -12,7 +12,7 @@ def results():
         # Carregando a base de dados
     try:
         df1 = pd.read_csv(
-            'https://raw.githubusercontent.com/danimoreira90/Canada-CO2-Vehicle-Emissions/main/CO2%20Emissions_Canada.csv')
+            'https://raw.githubusercontent.com/danimoreira90/Canada-CO2-Vehicle-Emissions/main/data/CO2%20Emissions_Canada.csv')
     except Exception as e:
         print(f"Erro ao ler o arquivo CSV: {e}")
 
