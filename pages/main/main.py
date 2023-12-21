@@ -1,3 +1,4 @@
+import streamlit as st
 def main():
     st.title('Análise de emissão de CO2 de veículos do Canadá')
     st.write(
