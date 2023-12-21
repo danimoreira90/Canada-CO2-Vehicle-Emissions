@@ -57,6 +57,7 @@ def exp_analisys():
 
     # Gráfico de Dispersão entre Tamanho do Motor e Emissões de CO2
     st.subheader('Gráfico de Dispersão entre Tamanho do Motor e Emissões de CO2')
+    fig, ax = plt.subplots()
     plt.figure(figsize=(10, 6))
     sns.scatterplot(x='Engine Size(L)', y='CO2 Emissions(g/km)', data=df, color='coral')
     plt.title('Gráfico de Dispersão entre Tamanho do Motor e Emissões de CO2')
@@ -66,6 +67,7 @@ def exp_analisys():
 
     # Boxplot por Tipo de Combustível
     st.subheader('BoxPlot por tipo de Combustível')
+    fig, ax = plt.subplots()
     plt.figure(figsize=(12, 8))
     sns.boxplot(x='Fuel Type', y='CO2 Emissions(g/km)', data=df, palette='viridis', hue='Fuel Type', legend=False)
     plt.title('Boxplot de Emissões de CO2 por Tipo de Combustível')
