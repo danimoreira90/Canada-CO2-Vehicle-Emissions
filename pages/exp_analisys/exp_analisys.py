@@ -44,36 +44,36 @@ def exp_analisys():
     
     st.title('1. Análise exploratória')
     
-    # Histograma de Emissões de CO2
+        # Histograma de Emissões de CO2
     st.subheader('Histograma de Emissões de CO2')
-    fig, ax = plt.subplots()
+    fig_1, ax = plt.subplots()
     sns.barplot(x='CO2 Emissions(g/km)', y='Frequency', data=df)
     plt.figure(figsize=(10, 6))
     plt.hist(df['CO2 Emissions(g/km)'], bins=30, color='skyblue', edgecolor='black')
     plt.title('Histograma de Emissões de CO2')
     plt.xlabel('CO2 Emissions (g/km)')
     plt.ylabel('Frequency')
-    st.pyplot(fig)
-
+    st.pyplot(fig_1)
+ 
     # Gráfico de Dispersão entre Tamanho do Motor e Emissões de CO2
     st.subheader('Gráfico de Dispersão entre Tamanho do Motor e Emissões de CO2')
-    fig, ax = plt.subplots()
-    plt.figure(figsize=(10, 6))
+    fig_2, ax = plt.subplots()    
     sns.scatterplot(x='Engine Size(L)', y='CO2 Emissions(g/km)', data=df, color='coral')
+    plt.figure(figsize=(10, 6))
     plt.title('Gráfico de Dispersão entre Tamanho do Motor e Emissões de CO2')
     plt.xlabel('Engine Size(L)')
     plt.ylabel('CO2 Emissions (g/km)')
-    st.pyplot(fig)
-
+    st.pyplot(fig_2)
+ 
     # Boxplot por Tipo de Combustível
     st.subheader('BoxPlot por tipo de Combustível')
-    fig, ax = plt.subplots()
-    plt.figure(figsize=(12, 8))
+    fig_3, ax = plt.subplots()    
     sns.boxplot(x='Fuel Type', y='CO2 Emissions(g/km)', data=df, palette='viridis', hue='Fuel Type', legend=False)
+    plt.figure(figsize=(12, 8))
     plt.title('Boxplot de Emissões de CO2 por Tipo de Combustível')
     plt.xlabel('Fuel Type')
     plt.ylabel('CO2 Emissions (g/km)')
-    st.pyplot(fig)
+    st.pyplot(fig_3)
 
     st.write('Resultados e Interpretação:')
     st.write('O resumo estatístico fornece uma visão geral das medidas centrais, variabilidade e distribuição de cada variável no conjunto de dados.')
