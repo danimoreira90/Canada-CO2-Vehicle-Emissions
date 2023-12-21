@@ -5,7 +5,7 @@ import seaborn as sns
 import numpy as np
 
 
-def exp_analysis():
+def exp_analisys():
         # Carregando a base de dados
     try:
         df1 = pd.read_csv(
